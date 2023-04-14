@@ -1,0 +1,19 @@
+@use '../styles/App' as app;
+
+.searchForParameters {
+    width: app.calculateSize(320vw);
+    display: flex;
+    flex-direction: column;
+
+    span {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 500;
+        font-size: app.calculateSize(16vw);
+        line-height: 150%;
+        color: #111111;
+        text-transform: uppercase;
+        margin-top: app.calculateSize(20vw);
+        margin-left: app.calculateSize(-20vw);
+    }
+}

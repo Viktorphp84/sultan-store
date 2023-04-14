@@ -1,0 +1,8 @@
+@use '../styles/App' as app;
+
+.productCardsContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: app.calculateSize(21vw);
+    margin-top: app.calculateSize(10vw);
+}

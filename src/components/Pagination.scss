@@ -1,0 +1,27 @@
+@use '../styles/App' as app;
+
+.paginationContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: app.calculateSize(2750vw);
+    align-items: center;
+
+    .pagination {
+        display: flex;
+        
+        .buttonNumberPage {
+            width: app.calculateSize(35vw);
+            height: app.calculateSize(35vw);
+            border-radius: app.calculateSize(17.5vw);
+            margin-left: app.calculateSize(10vw);
+            border: 0px solid #fff;
+            background-color: #fff;
+            cursor: pointer;
+        }
+
+        .buttonNumberPage_current {
+            background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+        }
+    }
+}
