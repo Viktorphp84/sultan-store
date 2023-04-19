@@ -19,26 +19,25 @@ const SortCards = (props: ISortCards) => {
         return sortCard.indexOf(value) === index;
     });
 
-    const [activeIndex, setActiveIndex] = useState<number | null>(-1);
-
-    const { setTypeSorting } = useContext(SortContext);
+    const { setSortingProperty, setTypeSorting, activeIndexSortCard, setActiveIndexSortCard } = useContext(SortContext);
 
     useEffect(() => {
-        if (activeIndex === null) {
+        if (activeIndexSortCard === null) {
             setTypeSorting('');
+            setSortingProperty('title');
         } 
-    }, [activeIndex]);
+    }, [activeIndexSortCard]);
 
     const handleClick = (index: number) => {
-        if (activeIndex === index) {
-            setActiveIndex(null);
+        if (activeIndexSortCard === index) {
+            setActiveIndexSortCard(null);
         } else {
-            setActiveIndex(index);
+            setActiveIndexSortCard(index);
         }
     };
 
     const sortCardElement = filterSortCard.map((element, index) => {
-        const active = activeIndex === index;
+        const active = activeIndexSortCard === index;
 
         return (
             <button
@@ -46,6 +45,7 @@ const SortCards = (props: ISortCards) => {
                 onClick={() => {
                     handleClick(index);
                     setTypeSorting(element);
+                    setSortingProperty('typeOfCare');
                 }}
             >
                 {element}

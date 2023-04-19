@@ -1,0 +1,64 @@
+@use '../styles/App' as app;
+
+.containerCheckboxList {
+    display: flex;
+    flex-direction: column;
+
+    div {
+        display: flex;
+        margin-top: app.calculateSize(5vw);
+
+        input[type="checkbox"] {
+            width: app.calculateSize(10vw);
+            height: app.calculateSize(10vw);
+            margin-top: app.calculateSize(5vw);
+            ;
+        }
+
+        >span:nth-of-type(1) {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: app.calculateSize(14vw);
+            line-height: 150%;
+            color: #3F4E65;
+            margin-left: app.calculateSize(10vw);
+        }
+
+        >span:nth-of-type(2) {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: app.calculateSize(10vw);
+            line-height: 150%;
+            color: #3F4E65;
+            margin-top: app.calculateSize(4vw);
+            margin-left: app.calculateSize(5vw);
+        }
+    }
+
+    .showAll {
+        display: flex;
+
+        button {
+            margin-top: app.calculateSize(10vw);
+            background-color: #FFFFFF;
+            border: 0px solid white;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: app.calculateSize(12vw);
+            line-height: 150%;
+            color: #3F4E65;
+        }
+
+        .triangle {
+            margin-top: app.calculateSize(12vw);
+            margin-left: app.calculateSize(10vw);
+        }
+
+        .triangle_rotated {
+            transform: rotate(180deg);
+        }
+    }
+}

@@ -5,7 +5,7 @@ import './ProductCardsContainer.scss'
 
 interface cardsContainer {
     cards: IProduct[];
-    renderItem: (item: IProduct) => React.ReactNode
+    renderItem: (item: IProduct) => React.ReactNode;
 }
 
 export default function ProductCardsContainer<IProduct> (props: cardsContainer) {

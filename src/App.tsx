@@ -5,6 +5,7 @@ import { addCard } from './cards';
 import Pagination from './components/Pagination';
 import SearchForParameters from './components/SearchForParameters';
 import SortCards from './components/SortCards';
+import Select from './components/Select';
 
 function App() {
   let [numberOfProductPages, setNumberOfProductPages] = useState<number>(0);
@@ -69,19 +70,13 @@ function App() {
         <div className='containerSorting'>
           <h1>Косметика и гигиена</h1>
           <div>
-            <span>Сортировка: </span>
-            <select className='sorting'>
-              <option value='title'>Название</option>
-              <option value='price'>Цена</option>
-              <option value='descending'>По убыванию</option>
-              <option value='ascending'>По возрастанию</option>
-            </select>
+            <Select/>
           </div>
         </div>
         <SortCards sortCardsMap={productCardMap} />
         <div className='horizontalContainer'>
           <SearchForParameters />
-          <Pagination cardMap={productCardMap} />
+          <Pagination cardsMap={productCardMap} />
         </div>
         <span className='subString'>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam interdum ut justo, vestibulum sagittis iaculis iaculis. Quis mattis vulputate<br />

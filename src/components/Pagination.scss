@@ -18,6 +18,7 @@
             border: 0px solid #fff;
             background-color: #fff;
             cursor: pointer;
+            margin-top: app.calculateSize(-150vw);
         }
 
         .buttonNumberPage_current {

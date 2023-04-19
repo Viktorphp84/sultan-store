@@ -14,7 +14,7 @@ const ProductCard: FC<Card> = ({card}) => {
                 <span>{card.size}</span>
                 <span>{card.typeOfSize}</span>
             </div>
-            <span>{card.name}</span>
+            <span>{card.title}</span>
             <div>
                 <span>Штрихкод: </span>
                 <span>{card.barcode}</span>

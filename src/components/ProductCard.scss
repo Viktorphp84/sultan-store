@@ -10,6 +10,7 @@
     padding: app.calculateSize(23vw); 
     border-radius: app.calculateSize(5vw);
     background: #FFF;
+    box-shadow: 0px app.calculateSize(15vw) app.calculateSize(70vw) app.calculateSize(-11vw) rgba(43, 28, 1, 0.04);
 
     .imageCard {
         height: app.calculateSize(170vw);

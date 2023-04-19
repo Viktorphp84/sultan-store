@@ -1,7 +1,7 @@
 export interface IProduct {
     id: number
     url: string;
-    name: string;
+    title: string;
     typeOfSize: string;
     size: string;
     typeOfCare: string[];

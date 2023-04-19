@@ -3,7 +3,7 @@ import { IProduct } from './types/types';
 const card_1: IProduct = {
     id: 1,
     url: 'images/card-1.png',
-    name: 'AOS Ср-во для мытья посуды Апельсин+мята',
+    title: 'AOS Ср-во для мытья посуды Апельсин+мята',
     typeOfSize: 'мл',
     size: '450',
     typeOfCare: ['Уход за руками'],
@@ -20,7 +20,7 @@ const card_1: IProduct = {
 const card_2: IProduct = {
     id: 2,
     url: 'images/card-2.png',
-    name: 'AOS средство для мытья посуды Crystal',
+    title: 'AOS средство для мытья посуды Crystal',
     typeOfSize: 'мл',
     size: '450',
     typeOfCare: ['Уход за руками'],
@@ -38,7 +38,7 @@ const card_2: IProduct = {
 const card_3: IProduct = {
     id: 3,
     url: 'images/card-3.png',
-    name: 'ARIEL Автмат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник',
+    title: 'ARIEL Автмат Гель СМС жидкое в растворимых капсулах Liquid Capsules Горный родник',
     typeOfSize: 'г',
     size: '15x28,8',
     typeOfCare: ['Средство для стирки'],
@@ -52,7 +52,7 @@ const card_3: IProduct = {
 const card_4: IProduct = {
     id: 4,
     url: 'images/card-4.png',
-    name: 'BIMAX Порошок стиральный Автомат 100 пятен COMPACT',
+    title: 'BIMAX Порошок стиральный Автомат 100 пятен COMPACT',
     typeOfSize: 'г',
     size: '1500',
     typeOfCare: ['Средство для стирки'],
@@ -66,7 +66,7 @@ const card_4: IProduct = {
 const card_5: IProduct = {
     id: 5,
     url: 'images/card-5.png',
-    name: 'BioMio BIO-SOAP Экологичное туалетное мыло',
+    title: 'BioMio BIO-SOAP Экологичное туалетное мыло',
     typeOfSize: 'г',
     size: '90',
     typeOfCare: ['Уход за руками'],
@@ -80,7 +80,7 @@ const card_5: IProduct = {
 const card_6: IProduct = {
     id: 6,
     url: 'images/card-6.jpg',
-    name: 'BioMio BIO-SOAP Натуральное мыло. Гранат и базилик',
+    title: 'BioMio BIO-SOAP Натуральное мыло. Гранат и базилик',
     typeOfSize: 'г',
     size: '90',
     typeOfCare: ['Уход за руками'],
@@ -94,7 +94,7 @@ const card_6: IProduct = {
 const card_7: IProduct = {
     id: 7,
     url: 'images/card-7.jpg',
-    name: 'Гель для душа "Удовое дерево и сандал"',
+    title: 'Гель для душа "Удовое дерево и сандал"',
     typeOfSize: 'мл',
     size: '250',
     typeOfCare: ['Уход за телом'],
@@ -108,7 +108,7 @@ const card_7: IProduct = {
 const card_8: IProduct = {
     id: 8,
     url: 'images/card-8.jpg',
-    name: 'Шампунь для объема с Медом и Пивом Logona',
+    title: 'Шампунь для объема с Медом и Пивом Logona',
     typeOfSize: 'мл',
     size: '500',
     typeOfCare: ['Уход за волосами'],
@@ -122,7 +122,7 @@ const card_8: IProduct = {
 const card_9: IProduct = {
     id: 9,
     url: 'images/card-9.jpg',
-    name: 'Гель для душа "Органический Инжир"',
+    title: 'Гель для душа "Органический Инжир"',
     typeOfSize: 'мл',
     size: '1000',
     typeOfCare: ['Уход за телом'],
@@ -136,7 +136,7 @@ const card_9: IProduct = {
 const card_10: IProduct = {
     id: 10,
     url: 'images/card-10.jpg',
-    name: 'Сыворотка для лица "Витамин С"',
+    title: 'Сыворотка для лица "Витамин С"',
     typeOfSize: 'мл',
     size: '30',
     typeOfCare: ['Уход за лицом'],
@@ -150,7 +150,7 @@ const card_10: IProduct = {
 const card_11: IProduct = {
     id: 11,
     url: 'images/card-11.jpg',
-    name: 'Полирующий скраб для лица №50 Sativa',
+    title: 'Полирующий скраб для лица №50 Sativa',
     typeOfSize: 'мл',
     size: '50',
     typeOfCare: ['Уход за лицом'],
@@ -164,7 +164,7 @@ const card_11: IProduct = {
 const card_12: IProduct = {
     id: 12,
     url: 'images/card-12.jpg',
-    name: 'Увлажняющий мусс для тела "Strawberry & Chocolate" Organic Shop',
+    title: 'Увлажняющий мусс для тела "Strawberry & Chocolate" Organic Shop',
     typeOfSize: 'мл',
     size: '450',
     typeOfCare: ['Уход за телом', 'Уход за лицом'],
@@ -178,7 +178,7 @@ const card_12: IProduct = {
 const card_13: IProduct = {
     id: 13,
     url: 'images/card-13.jpg',
-    name: 'Шампунь-скраб для укрепления и роста волос с репейным маслом 4fresh BEAUTY',
+    title: 'Шампунь-скраб для укрепления и роста волос с репейным маслом 4fresh BEAUTY',
     typeOfSize: 'мл',
     size: '300',
     typeOfCare: ['Уход за волосами'],
@@ -192,7 +192,7 @@ const card_13: IProduct = {
 const card_14: IProduct = {
     id: 14,
     url: 'images/card-14.jpg',
-    name: 'Гель для интимной гигиены Levrana',
+    title: 'Гель для интимной гигиены Levrana',
     typeOfSize: 'мл',
     size: '250',
     typeOfCare: ['Уход за телом'],
@@ -206,7 +206,7 @@ const card_14: IProduct = {
 const card_15: IProduct = {
     id: 15,
     url: 'images/card-15.jpg',
-    name: 'Масло "Кокосовое" Parachute',
+    title: 'Масло "Кокосовое" Parachute',
     typeOfSize: 'мл',
     size: '200',
     typeOfCare: ['Уход за телом', 'Уход за лицом', 'Уход за волосами'],
@@ -220,7 +220,7 @@ const card_15: IProduct = {
 const card_16: IProduct = {
     id: 16,
     url: 'images/card-16.jpg',
-    name: 'Дезодорант-кристалл с соком Алоэ DeoNat',
+    title: 'Дезодорант-кристалл с соком Алоэ DeoNat',
     typeOfSize: 'г',
     size: '60',
     typeOfCare: ['Уход за телом'],
@@ -234,7 +234,7 @@ const card_16: IProduct = {
 const card_17: IProduct = {
     id: 17,
     url: 'images/card-17.jpg',
-    name: 'Шампунь с био-манго и алое, увлажняющий Sante',
+    title: 'Шампунь с био-манго и алое, увлажняющий Sante',
     typeOfSize: 'мл',
     size: '950',
     typeOfCare: ['Уход за волосами'],
@@ -248,7 +248,7 @@ const card_17: IProduct = {
 const card_18: IProduct = {
     id: 18,
     url: 'images/card-18.jpg',
-    name: 'Крем солнцезащитный для лица и тела "Sun Screen"',
+    title: 'Крем солнцезащитный для лица и тела "Sun Screen"',
     typeOfSize: 'мл',
     size: '50',
     typeOfCare: ['Уход за телом'],
@@ -279,6 +279,25 @@ export const productCardMap: Array<IProduct> = [
     card_17,
     card_18
 ];
+
+interface ICountProperty {
+    [key: string]: number;
+}
+
+const manufacturerCounts: ICountProperty = productCardMap.reduce((acc: ICountProperty, product: IProduct) => {
+    const manufacturer = product.manufacturer;
+    acc[manufacturer] = acc[manufacturer] ? acc[manufacturer] + 1 : 1;
+    return acc;
+}, {});
+
+const brandCounts: ICountProperty = productCardMap.reduce((acc: ICountProperty, product: IProduct) => {
+    const brand = product.brand;
+    acc[brand] = acc[brand] ? acc[brand] + 1 : 1;
+    return acc;
+}, {});
+
+export const manufacturerArray = Object.entries(manufacturerCounts).map(([checkBoxProperty, count]) => ({ checkBoxProperty, count }));
+export const brandArray = Object.entries(brandCounts).map(([checkBoxProperty, count]) => ({ checkBoxProperty, count }));
 
 export function addCard(card: IProduct): Array<IProduct> {
     productCardMap.push(card);
