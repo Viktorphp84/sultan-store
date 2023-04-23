@@ -6,7 +6,7 @@
   box-sizing: border-box;
 }
 
-$multiplier: 0.0758;
+$multiplier: 0.058;
 /*0.0758*/
 
 @function calculateSize($size) {
@@ -18,7 +18,7 @@ $multiplier: 0.0758;
   flex-direction: column;
   align-items: center;
   background: #ffffff;
-  width: calculateSize(1920vw);
+  width: 100%;
 
   .header {
 
@@ -121,7 +121,7 @@ $multiplier: 0.0758;
 
     hr {
       margin-top: calculateSize(15vw);
-      width: calculateSize(1920vw);
+      width: 100%;
       align-self: center;
     }
 

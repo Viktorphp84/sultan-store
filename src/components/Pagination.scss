@@ -9,7 +9,7 @@
 
     .pagination {
         display: flex;
-        
+
         .buttonNumberPage {
             width: app.calculateSize(35vw);
             height: app.calculateSize(35vw);
@@ -19,6 +19,13 @@
             background-color: #fff;
             cursor: pointer;
             margin-top: app.calculateSize(-150vw);
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: app.calculateSize(14vw);
+            line-height: 130%;
+            text-align: center;
+            color: #3F4E65;
         }
 
         .buttonNumberPage_current {
