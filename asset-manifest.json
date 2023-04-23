@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/static/css/main.b81a0d1f.css",
-    "main.js": "/static/js/main.b4bdaa9d.js",
-    "static/media/clover_icon.svg": "/static/media/clover_icon.b6f03f0833e38dd92293.svg",
-    "static/media/search_icon_group.svg": "/static/media/search_icon_group.8ccdf0814cd4cac3b494.svg",
-    "index.html": "/index.html",
-    "static/media/download-icon.svg": "/static/media/download-icon.5bd80f7c253a74a2b166.svg",
-    "static/media/arrow.svg": "/static/media/arrow.35ab94e2f8817f324bd3.svg",
-    "main.b81a0d1f.css.map": "/static/css/main.b81a0d1f.css.map",
-    "main.b4bdaa9d.js.map": "/static/js/main.b4bdaa9d.js.map"
+    "main.css": "/sulatan-store/static/css/main.e5d0aa03.css",
+    "main.js": "/sulatan-store/static/js/main.b4bdaa9d.js",
+    "static/media/clover_icon.svg": "/sulatan-store/static/media/clover_icon.b6f03f0833e38dd92293.svg",
+    "static/media/search_icon_group.svg": "/sulatan-store/static/media/search_icon_group.8ccdf0814cd4cac3b494.svg",
+    "index.html": "/sulatan-store/index.html",
+    "static/media/download-icon.svg": "/sulatan-store/static/media/download-icon.5bd80f7c253a74a2b166.svg",
+    "static/media/arrow.svg": "/sulatan-store/static/media/arrow.35ab94e2f8817f324bd3.svg",
+    "main.e5d0aa03.css.map": "/sulatan-store/static/css/main.e5d0aa03.css.map",
+    "main.b4bdaa9d.js.map": "/sulatan-store/static/js/main.b4bdaa9d.js.map"
   },
   "entrypoints": [
-    "static/css/main.b81a0d1f.css",
+    "static/css/main.e5d0aa03.css",
     "static/js/main.b4bdaa9d.js"
   ]
 }
