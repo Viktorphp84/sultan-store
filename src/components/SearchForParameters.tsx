@@ -38,7 +38,7 @@ const SearchForParameters = () => {
             </div>
             <span>Производитель</span>
             <SearchLine sortingProperty='manufacturer' />
-            <CheckboxList checkBoxList={manufacturerArray}/>
+            <CheckboxList checkBoxList={manufacturerArray} sortingProperty='manufacturer'/>
         </div>
     );
 };

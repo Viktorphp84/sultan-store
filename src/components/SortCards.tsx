@@ -1,4 +1,4 @@
-import {  useContext, useEffect, useState } from 'react';
+import {  useContext, useEffect } from 'react';
 import { IProduct } from '../types/types';
 import './SortCards.scss';
 import { SortContext } from '../context/Context';
@@ -19,18 +19,23 @@ const SortCards = (props: ISortCards) => {
         return sortCard.indexOf(value) === index;
     });
 
-    const { setSortingProperty, setTypeSorting, activeIndexSortCard, setActiveIndexSortCard } = useContext(SortContext);
+    const {
+        setSortingProperty,
+        setTypeSorting,
+        activeIndexSortCard,
+        setActiveIndexSortCard,
+    } = useContext(SortContext);
 
     useEffect(() => {
-        if (activeIndexSortCard === null) {
-            setTypeSorting('');
+        if (activeIndexSortCard === -1) {
+            setTypeSorting('reset');
             setSortingProperty('title');
         } 
     }, [activeIndexSortCard]);
 
     const handleClick = (index: number) => {
         if (activeIndexSortCard === index) {
-            setActiveIndexSortCard(null);
+            setActiveIndexSortCard(-1);
         } else {
             setActiveIndexSortCard(index);
         }

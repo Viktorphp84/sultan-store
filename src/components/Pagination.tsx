@@ -1,9 +1,8 @@
-import {useState, useEffect, useContext, useMemo} from 'react';
+import { useState, useContext, useMemo } from 'react';
 import './Pagination.scss';
 import ProductCardsContainer from './ProductCardsContainer';
 import ProductCard from './ProductCard';
 import { IProduct } from '../types/types';
-import SortCards from './SortCards';
 import { SortContext } from '../context/Context';
 
 interface IPagination {
@@ -17,7 +16,14 @@ const Pagination = (props: IPagination) => {
     const [filteredMapState, setFilteredMapState] = useState<IProduct[]>([]);
     const [pages, setPages] = useState<number[]>([]);
 
-    const { typeSorting, sortingProperty, leftPriceRange, rightPriceRange, setRightPriceRange } = useContext(SortContext);
+    const {
+        typeSorting,
+        sortingProperty,
+        setSortingProperty,
+        leftPriceRange,
+        rightPriceRange,
+        setRightPriceRange,
+        activeIndexSortCard } = useContext(SortContext);
 
     function calculateNumberOfProductPages(length: number): number {
         return Math.ceil(length / 15);
@@ -25,6 +31,8 @@ const Pagination = (props: IPagination) => {
 
     let numberOfPages: number;
     let splitTypeSorting: string | string[];
+
+    if (typeSorting === '') setSortingProperty('title');
 
     if (typeSorting.includes(' ')) {
         splitTypeSorting = typeSorting.split(' ');
@@ -35,32 +43,18 @@ const Pagination = (props: IPagination) => {
     useMemo(() => {
         let cardsMap: IProduct[];
 
-        /*if (typeSorting === 'descending' || typeSorting === 'ascending' || typeSorting === 'title') {
-            cardsMap = filteredMapState;
-        } else if (!typeSorting) {
-            cardsMap = props.cardsMap;
-        } else {
-            cardsMap = props.cardsMap.filter((element) => {
-                const sortingValue = Array.isArray(element[sortingProperty])
-                    ? element[sortingProperty] as string[] : element[sortingProperty] as string;
-                
-                return Array.isArray(sortingValue)
-                    ? sortingValue.includes(typeSorting)
-                    : sortingValue.toLowerCase().includes(typeSorting.toLowerCase());
-            });
-        }*/
-
         if (splitTypeSorting === 'descending' || splitTypeSorting === 'ascending' || splitTypeSorting === 'title') {
             cardsMap = filteredMapState;
-        } else if (!splitTypeSorting) {
+        } else if (splitTypeSorting === 'reset' || (typeSorting === "" && sortingProperty === "title")) {
             cardsMap = props.cardsMap;
         } else {
-            cardsMap = ((sortingProperty === 'manufacturer' || sortingProperty === 'brand')
-                ? filteredMapState
-                : props.cardsMap).filter((element) => {
-                const sortingValue = Array.isArray(element[sortingProperty])
-                    ? element[sortingProperty] as string[] : element[sortingProperty] as string;
+            cardsMap = (((sortingProperty === 'manufacturer' && activeIndexSortCard < 0)
+                || (sortingProperty === 'brand' && activeIndexSortCard < 0))
+                ? props.cardsMap : (activeIndexSortCard >= 0) ? props.cardsMap : filteredMapState).filter((element) => {
                 
+                const sortingValue = Array.isArray(element[sortingProperty])
+                        ? element[sortingProperty] as string[] : element[sortingProperty] as string;
+                console.log(activeIndexSortCard);
                 if (Array.isArray(sortingValue)) {
                     for (let i = 0; i < sortingValue.length; ++i) {
                         return sortingValue.includes(typeSorting);
@@ -68,13 +62,13 @@ const Pagination = (props: IPagination) => {
                 } else {
                     if (Array.isArray(splitTypeSorting)) {
                         for (let y = 0; y < splitTypeSorting.length; ++y) {
-                            return splitTypeSorting[y] === sortingValue;
+                            if (splitTypeSorting[y] === sortingValue) return true;
                         }
                     } else {
                         return sortingValue.toLowerCase().includes(splitTypeSorting.toLowerCase());
                     }
                 }
-            });
+                });
         }
 
         if (rightPriceRange <= leftPriceRange) setRightPriceRange(Infinity);
@@ -105,7 +99,7 @@ const Pagination = (props: IPagination) => {
         });
 
         setFilteredMapState(filteredByPriceCardsMap);
-        
+
         numberOfPages = calculateNumberOfProductPages(filteredByPriceCardsMap.length);
 
         setPages(Array.from({ length: numberOfPages }, (_, i) => i + 1));

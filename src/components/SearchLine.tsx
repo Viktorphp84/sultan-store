@@ -21,7 +21,7 @@ const SearchLine: FC<ISearchLine> = ({sortingProperty}) => {
         } else {
             setTypeSorting(searchValue);
             setSortingProperty('title');
-            setActiveIndexSortCard(null);
+            setActiveIndexSortCard(-1);
         }
     };
 
@@ -38,7 +38,7 @@ const SearchLine: FC<ISearchLine> = ({sortingProperty}) => {
             } else {
                 setTypeSorting(searchValue);
                 setSortingProperty('title');
-                setActiveIndexSortCard(null);
+                setActiveIndexSortCard(-1);
             }
         }
     };

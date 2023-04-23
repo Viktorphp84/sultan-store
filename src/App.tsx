@@ -1,15 +1,13 @@
-import { useMemo, useState } from 'react';
+import { useState } from 'react';
 import './styles/App.scss';
 import { productCardMap } from './cards';
-import { addCard } from './cards';
 import Pagination from './components/Pagination';
 import SearchForParameters from './components/SearchForParameters';
 import SortCards from './components/SortCards';
 import Select from './components/Select';
 
 function App() {
-  let [numberOfProductPages, setNumberOfProductPages] = useState<number>(0);
-  
+
   return (
     <div className='App'>
       <header className="header">
@@ -85,7 +83,50 @@ function App() {
         </span>
       </main>
       <footer>
-        
+        <div>
+          <img src='images/sultan-logo-white.svg' alt='sultan logo'/>
+          <span>Компания «Султан» — снабжаем<br /> розничные магазины товарами<br />
+            "под ключ" в Кокчетаве и Акмолинской<br /> области</span>
+          <span>Подпишись на скидки и акции</span>
+          <input type='text' placeholder='Введите ваш e-mail'/>
+          <button></button>
+        </div>
+        <div>
+          <span>Меню сайта:</span>
+          <a href='#'>О компании</a>
+          <a href='#'>Доставка и оплата</a>
+          <a href='#'>Возврат</a>
+          <a href='#'>Контакты</a>
+        </div>
+        <div>
+          <span>Категории:</span>
+          <a href='#'>Бытовая химия</a>
+          <a href='#'>Косметика и гигиена</a>
+          <a href='#'>Товары для дома</a>
+          <a href='#'>Товары для детей и мам</a>
+          <a href='#'>Посуда</a>
+        </div>
+        <div>
+          <span>Скачать прайс-лист:</span>
+          <button>Прайс-лист</button>
+          <span>Связь в месседжерах:</span>
+          <div>
+            <img src='images/whatsapp-logo.svg' alt='whatsapp logo' />
+            <img src='images/telegram-logo.svg' alt='telegram logo' />
+          </div>
+        </div>
+        <div>
+          <span>Контакты:</span>
+          <span>+7 (777) 490-00-91</span>
+          <span>время работы: 9:00-20:00</span>
+          <a href='#'>Заказать звонок</a>
+          <span>opt.sultan@mail.ru </span>
+          <span>На связи в любое время</span>
+          <div>
+            <img src='images/visa.png' alt='visa image' />
+            <img src='images/master-card.png' alt='master card image' />
+          </div>
+        </div>
       </footer>
     </div>
   );
