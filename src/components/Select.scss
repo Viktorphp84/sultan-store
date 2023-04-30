@@ -1,23 +1,57 @@
 @use '../styles/App' as app;
 
-div {
+@media (max-width: 599px) {
 
-    span {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 500;
-        font-size: app.calculateSize(16vw);
-        line-height: 150%;
-        color: #111111;
+    @function calculateSize($size) {
+        @return $size * $multiplier;
     }
 
-    .sorting {
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: app.calculateSize(16vw);
-        line-height: 150%;
-        color: #3F4E65;
-        border: none;
+    $multiplier: 0.195;
+
+    div {
+
+        span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: calculateSize(22vw);
+            line-height: 150%;
+            color: #111111;
+        }
+
+        .sorting {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: calculateSize(22vw);
+            line-height: 150%;
+            color: #3F4E65;
+            border: none;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    
+    div {
+
+        span {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: app.calculateSize(16vw);
+            line-height: 150%;
+            color: #111111;
+        }
+
+        .sorting {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: app.calculateSize(16vw);
+            line-height: 150%;
+            color: #3F4E65;
+            border: none;
+        }
     }
 }

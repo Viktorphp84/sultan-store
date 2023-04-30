@@ -1,35 +1,80 @@
 @use '../styles/App' as app;
 
-.paginationContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    height: app.calculateSize(2750vw);
-    align-items: center;
+@media (max-width: 599px) {
 
-    .pagination {
+    @function calculateSize($size) {
+        @return $size * $multiplier;
+    }
+
+    $multiplier: 0.31;
+
+    .paginationContainer {
         display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
 
-        .buttonNumberPage {
-            width: app.calculateSize(35vw);
-            height: app.calculateSize(35vw);
-            border-radius: app.calculateSize(17.5vw);
-            margin-left: app.calculateSize(10vw);
-            border: 0px solid #fff;
-            background-color: #fff;
-            cursor: pointer;
-            margin-top: app.calculateSize(-150vw);
-            font-family: 'Inter';
-            font-style: normal;
-            font-weight: 500;
-            font-size: app.calculateSize(14vw);
-            line-height: 130%;
-            text-align: center;
-            color: #3F4E65;
+        .pagination {
+            display: flex;
+
+            .buttonNumberPage {
+                justify-self: center;
+                width: calculateSize(35vw);
+                height: calculateSize(35vw);
+                border-radius: calculateSize(17.5vw);
+                margin-top: calculateSize(30vw);
+                border: 0px solid #fff;
+                background-color: #fff;
+                cursor: pointer;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: calculateSize(14vw);
+                line-height: 130%;
+                text-align: center;
+                color: #3F4E65;
+            }
+
+            .buttonNumberPage_current {
+                background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+            }
         }
+    }
+}
 
-        .buttonNumberPage_current {
-            background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+@media (min-width: 600px) {
+
+    .paginationContainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: app.calculateSize(2750vw);
+        align-items: center;
+
+        .pagination {
+            display: flex;
+
+            .buttonNumberPage {
+                width: app.calculateSize(35vw);
+                height: app.calculateSize(35vw);
+                border-radius: app.calculateSize(17.5vw);
+                margin-left: app.calculateSize(10vw);
+                border: 0px solid #fff;
+                background-color: #fff;
+                cursor: pointer;
+                margin-top: app.calculateSize(-150vw);
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: app.calculateSize(14vw);
+                line-height: 130%;
+                text-align: center;
+                color: #3F4E65;
+            }
+
+            .buttonNumberPage_current {
+                background: linear-gradient(90deg, rgba(255, 198, 80, 0.3) 0%, rgba(254, 202, 110, 0.3) 97.25%);
+            }
         }
     }
 }

@@ -1,32 +1,72 @@
 @use '../styles/App' as app;
 
-.containerSortCards {
-    display: flex;
-    justify-content: center;
+@media (max-width: 599px) {
 
-    margin-top: app.calculateSize(25vw);
-    margin-bottom: app.calculateSize(30vw);
-
-    .sortCard {
-        width: max-content;
-        height: app.calculateSize(70vw);
-        margin-left: app.calculateSize(11vw);
-        background: #FFFFFF;
-        box-shadow: 0px app.calculateSize(15vw) app.calculateSize(70vw) app.calculateSize(-11vw) rgba(43, 28, 1, 0.04);
-        border-radius: 10px;
-        padding: app.calculateSize(20vw);
-        border: 0px solid white;
-        cursor: pointer;
-        font-family: 'Inter';
-        font-style: normal;
-        font-weight: 400;
-        font-size: app.calculateSize(14vw);
-        line-height: app.calculateSize(17);
-        text-align: center;
-        color: #3F4E65;
+    @function calculateSize($size) {
+        @return $size * $multiplier;
     }
 
-    .sortCard_active {
-        border: app.calculateSize(1vw) solid black;
+    $multiplier: 0.195;
+
+    .containerSortCards {
+        display: flex;
+        flex-direction: column;
+
+        .sortCard {
+            width: max-content;
+            height: max-content;
+            background: #FFFFFF;
+            box-shadow: 0px calculateSize(15vw) calculateSize(70vw) calculateSize(-11vw) rgba(43, 28, 1, 0.04);
+            border-radius: 10px;
+            border: 0px solid white;
+            cursor: pointer;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: calculateSize(22vw);
+            line-height: calculateSize(17vw);
+            text-align: center;
+            color: #3F4E65;
+            margin-bottom: calculateSize(7vw);
+            padding: calculateSize(10vw);
+        }
+
+        .sortCard_active {
+            border: calculateSize(1vw) solid black;
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    
+    .containerSortCards {
+        display: flex;
+        justify-content: center;
+
+        margin-top: app.calculateSize(25vw);
+        margin-bottom: app.calculateSize(30vw);
+
+        .sortCard {
+            width: max-content;
+            height: app.calculateSize(70vw);
+            margin-left: app.calculateSize(11vw);
+            background: #FFFFFF;
+            box-shadow: 0px app.calculateSize(15vw) app.calculateSize(70vw) app.calculateSize(-11vw) rgba(43, 28, 1, 0.04);
+            border-radius: 10px;
+            padding: app.calculateSize(20vw);
+            border: 0px solid white;
+            cursor: pointer;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 400;
+            font-size: app.calculateSize(14vw);
+            line-height: app.calculateSize(17vw);
+            text-align: center;
+            color: #3F4E65;
+        }
+
+        .sortCard_active {
+            border: app.calculateSize(1vw) solid black;
+        }
     }
 }

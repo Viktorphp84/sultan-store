@@ -31,7 +31,7 @@ const Select: FC = () => {
     };
 
     return (
-        <div>
+        <div className='select'>
             <span>Сортировка: </span>
             <select className='sorting' onChange={handleSortChange}>
                 <option value='title'>Название</option>

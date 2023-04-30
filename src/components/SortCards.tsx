@@ -59,7 +59,7 @@ const SortCards = (props: ISortCards) => {
     });
 
     return (
-        <div className='containerSortCards'>
+        <div id='containerSortCards' className='containerSortCards'>
             {sortCardElement}
         </div>
     );

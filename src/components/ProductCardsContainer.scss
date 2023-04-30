@@ -1,8 +1,26 @@
 @use '../styles/App' as app;
 
-.productCardsContainer {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: app.calculateSize(21vw);
-    margin-top: app.calculateSize(10vw);
+@media (max-width: 599px) {
+
+    @function calculateSize($size) {
+        @return $size * $multiplier;
+    }
+
+    $multiplier: 0.195;
+
+    .productCardsContainer {
+        display: flex;
+        flex-direction: column;
+        margin-top: calculateSize(10vw);
+    }
+}
+
+@media (min-width: 600px) {
+
+    .productCardsContainer {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: app.calculateSize(21vw);
+        margin-top: app.calculateSize(10vw);
+    }
 }

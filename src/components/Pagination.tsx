@@ -48,27 +48,32 @@ const Pagination = (props: IPagination) => {
         } else if (splitTypeSorting === 'reset' || (typeSorting === "" && sortingProperty === "title")) {
             cardsMap = props.cardsMap;
         } else {
-            cardsMap = (((sortingProperty === 'manufacturer' && activeIndexSortCard < 0)
+            cardsMap = (
+                ((sortingProperty === 'manufacturer' && activeIndexSortCard < 0)
                 || (sortingProperty === 'brand' && activeIndexSortCard < 0))
-                ? props.cardsMap : (activeIndexSortCard >= 0) ? props.cardsMap : filteredMapState).filter((element) => {
-                
-                const sortingValue = Array.isArray(element[sortingProperty])
-                        ? element[sortingProperty] as string[] : element[sortingProperty] as string;
-                console.log(activeIndexSortCard);
-                if (Array.isArray(sortingValue)) {
-                    for (let i = 0; i < sortingValue.length; ++i) {
-                        return sortingValue.includes(typeSorting);
-                    }
-                } else {
-                    if (Array.isArray(splitTypeSorting)) {
-                        for (let y = 0; y < splitTypeSorting.length; ++y) {
-                            if (splitTypeSorting[y] === sortingValue) return true;
-                        }
-                    } else {
-                        return sortingValue.toLowerCase().includes(splitTypeSorting.toLowerCase());
-                    }
-                }
-                });
+                ? props.cardsMap
+                : (activeIndexSortCard >= 0 && sortingProperty === 'manufacturer')
+                    ? filteredMapState
+                    : (activeIndexSortCard >= 0)
+                        ? props.cardsMap : filteredMapState).filter((element) => {
+
+                            const sortingValue = Array.isArray(element[sortingProperty])
+                                ? element[sortingProperty] as string[] : element[sortingProperty] as string;
+
+                            if (Array.isArray(sortingValue)) {
+                                for (let i = 0; i < sortingValue.length; ++i) {
+                                    return sortingValue.includes(typeSorting);
+                                }
+                            } else {
+                                if (Array.isArray(splitTypeSorting)) {
+                                    for (let y = 0; y < splitTypeSorting.length; ++y) {
+                                        if (splitTypeSorting[y] === sortingValue) return true;
+                                    }
+                                } else {
+                                    return sortingValue.toLowerCase().includes(splitTypeSorting.toLowerCase());
+                                }
+                            }
+                        });
         }
 
         if (rightPriceRange <= leftPriceRange) setRightPriceRange(Infinity);
