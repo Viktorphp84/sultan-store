@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "./static/css/main.8a7ab1f0.css",
-    "main.js": "./static/js/main.060b1f5b.js",
+    "main.css": "./static/css/main.fe187fd8.css",
+    "main.js": "./static/js/main.f867c7d8.js",
     "static/media/clover-icon-black.svg": "./static/media/clover-icon-black.1928cbd9b07950bf3fa5.svg",
     "static/media/clover_icon.svg": "./static/media/clover_icon.b6f03f0833e38dd92293.svg",
     "static/media/search_icon_group.svg": "./static/media/search_icon_group.8ccdf0814cd4cac3b494.svg",
@@ -9,11 +9,11 @@
     "static/media/download-icon.svg": "./static/media/download-icon.5bd80f7c253a74a2b166.svg",
     "static/media/arrow.svg": "./static/media/arrow.35ab94e2f8817f324bd3.svg",
     "static/media/back-arrow.svg": "./static/media/back-arrow.5a3ebbf524233ddda3e3.svg",
-    "main.8a7ab1f0.css.map": "./static/css/main.8a7ab1f0.css.map",
-    "main.060b1f5b.js.map": "./static/js/main.060b1f5b.js.map"
+    "main.fe187fd8.css.map": "./static/css/main.fe187fd8.css.map",
+    "main.f867c7d8.js.map": "./static/js/main.f867c7d8.js.map"
   },
   "entrypoints": [
-    "static/css/main.8a7ab1f0.css",
-    "static/js/main.060b1f5b.js"
+    "static/css/main.fe187fd8.css",
+    "static/js/main.f867c7d8.js"
   ]
 }
